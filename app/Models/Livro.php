@@ -9,10 +9,9 @@ class Livro extends Model
     //
     protected $fillable = [
         'titulo',
-        'autor',
-        'editora',
-        'ano_publicacao',
+        'autor_id',
         'isbn',
+        'data_publicacao',
     ];
 
     protected $table = 'livros';
