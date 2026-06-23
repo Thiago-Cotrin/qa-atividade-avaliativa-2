@@ -106,3 +106,26 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Atividade Avaliativa 2 - Testes de Integracao
+
+Esta entrega adiciona testes de integracao para os principais fluxos HTTP do sistema de biblioteca e configura GitHub Actions para executar a suite automaticamente em pull requests.
+
+Resumo do que foi entregue:
+
+- Testes de integracao em `tests/Feature/LibraryIntegrationTest.php`.
+- Validacoes de entrada nos fluxos de bibliotecas, pessoas e livros.
+- CRUD completo para pessoas e autores.
+- Ajustes de persistencia nos models `Autor` e `Livro`.
+- Workflow em `.github/workflows/tests.yml`.
+- Relatorio detalhado em `RELATORIO_TESTES_INTEGRACAO.md`.
+
+Para executar:
+
+```bash
+cp .env.example .env
+composer install
+php artisan key:generate
+php artisan test
+```
+
+---
