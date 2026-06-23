@@ -7,10 +7,14 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PessoaController;
 use App\Http\Controllers\LivroController;
 use App\Http\Controllers\AutorController;
+use App\Http\Controllers\TestRunnerController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/testes', [TestRunnerController::class, 'index'])->name('testes.index');
+Route::post('/testes/run', [TestRunnerController::class, 'run'])->name('testes.run');
 
 Route::get("/bibliotecas", [BibliotecasController::class, 'index'])->name("bibliotecas.index");
 Route::get("/bibliotecas/new", [BibliotecasController::class, 'create'])->name("bibliotecas.create");

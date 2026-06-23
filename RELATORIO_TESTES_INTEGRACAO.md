@@ -59,6 +59,10 @@ Foram implementados testes de integracao para validar os principais fluxos HTTP 
 - `app/Models/Livro.php`
 - `tests/Feature/LibraryIntegrationTest.php`
 - `.github/workflows/tests.yml`
+- `app/Http/Controllers/TestRunnerController.php`
+- `resources/views/testes/index.blade.php`
+- `resources/views/welcome.blade.php`
+- `routes/web.php`
 
 ## Como executar localmente
 
@@ -74,6 +78,14 @@ Para cobertura de codigo:
 ```bash
 php artisan test --coverage --min=0
 ```
+
+Tambem foi adicionada uma tela local para executar os testes pelo navegador:
+
+```text
+http://localhost:8000/testes
+```
+
+Essa tela permite rodar `php artisan test` e `php artisan test --coverage --min=0`, exibindo a saida do terminal na propria pagina. A execucao fica liberada apenas em ambiente `local` ou `testing`.
 
 ## Automacao
 

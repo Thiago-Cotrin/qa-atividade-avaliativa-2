@@ -128,4 +128,10 @@ php artisan key:generate
 php artisan test
 ```
 
+Com o servidor local ligado, tambem e possivel executar os testes pela tela:
+
+```text
+http://localhost:8000/testes
+```
+
 ---
